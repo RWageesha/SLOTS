@@ -46,10 +46,9 @@ yarn-error.log
 *.aab
 *.aar
 
-# Test results
+# Test result artifacts (not test source code)
 test-results/
-app/src/test/
-app/src/androidTest/
+app/build/reports/
 
 # IDE files
 *.idea/

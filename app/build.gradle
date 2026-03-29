@@ -20,9 +20,17 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        // TODO: Replace with your actual Vercel deployment URL (see README for setup instructions)
         buildConfigField "String", "BASE_URL", '"https://your-vercel-app.vercel.app/"'
-        // WARNING: For production, remove this and proxy OpenAI calls through your backend instead.
-        buildConfigField "String", "OPENAI_API_KEY", '"your_openai_api_key_here"'
+        // WARNING: Development only. In production, remove this field and proxy all AI calls
+        // through the backend /api/chatbot endpoint to keep the key server-side.
+        // Use local.properties to inject this value: OPENAI_API_KEY=sk-...
+        def localProperties = new Properties()
+        def localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            localPropertiesFile.withReader('UTF-8') { reader -> localProperties.load(reader) }
+        }
+        buildConfigField "String", "OPENAI_API_KEY", "\"${localProperties.getProperty('OPENAI_API_KEY', '')}\""
     }
 
     buildTypes {

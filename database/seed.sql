@@ -2,11 +2,12 @@
 -- Run this AFTER schema.sql
 
 -- Insert test user
--- IMPORTANT: Replace 'test-firebase-uid-here' with an actual Firebase UID from your
--- Firebase project (found in Firebase Console → Authentication → Users → UID column).
+-- IMPORTANT: Replace 'REPLACE-WITH-ACTUAL-FIREBASE-UID' with a real Firebase UID from your
+-- Firebase project (Firebase Console → Authentication → Users → UID column).
+-- Using this placeholder as-is will cause foreign key errors in related inserts.
 INSERT INTO users (id, email, name, firebase_uid)
 VALUES 
-    ('00000000-0000-0000-0000-000000000001', 'test@example.com', 'Test User', 'test-firebase-uid-here')
+    ('00000000-0000-0000-0000-000000000001', 'test@example.com', 'Test User', 'REPLACE-WITH-ACTUAL-FIREBASE-UID')
 ON CONFLICT (email) DO NOTHING;
 
 -- Insert sample tasks

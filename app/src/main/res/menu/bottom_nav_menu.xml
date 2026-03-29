@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="@string/dashboard" />
+    <item
+        android:id="@+id/tasksFragment"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="@string/tasks" />
+    <item
+        android:id="@+id/budgetFragment"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/budget" />
+    <item
+        android:id="@+id/debtFragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/debts" />
+    <item
+        android:id="@+id/chatbotFragment"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="@string/chatbot" />
+</menu>

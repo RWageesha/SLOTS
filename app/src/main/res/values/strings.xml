@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SLOTS</string>
+    <string name="app_full_name">Smart Life Organizing and Tracking System</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <!-- Navigation -->
+    <string name="dashboard">Dashboard</string>
+    <string name="tasks">Tasks</string>
+    <string name="budget">Budget</string>
+    <string name="debts">Debts</string>
+    <string name="chatbot">AI Chat</string>
+
+    <!-- Dashboard -->
+    <string name="pending_tasks">Pending Tasks</string>
+    <string name="upcoming_deadlines">Upcoming Deadlines</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="monthly_expenses">Monthly Expenses</string>
+    <string name="balance">Balance</string>
+    <string name="no_upcoming_deadlines">No upcoming deadlines</string>
+    <string name="quick_actions">Quick Actions</string>
+
+    <!-- Tasks -->
+    <string name="add_task">Add Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Description</string>
+    <string name="task_category">Category</string>
+    <string name="task_priority">Priority</string>
+    <string name="task_deadline">Deadline</string>
+    <string name="pick_deadline">Pick Deadline</string>
+    <string name="no_tasks">No tasks yet. Add one!</string>
+    <string name="filter_all">All</string>
+    <string name="filter_pending">Pending</string>
+    <string name="filter_completed">Completed</string>
+
+    <!-- Budget -->
+    <string name="add_transaction">Add Transaction</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="amount">Amount</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="no_transactions">No transactions this month</string>
+    <string name="expenses_by_category">Expenses by Category</string>
+
+    <!-- Debts -->
+    <string name="add_debt">Add Debt</string>
+    <string name="person_name">Person Name</string>
+    <string name="debt_type">Type</string>
+    <string name="borrowed">Borrowed</string>
+    <string name="lent">Lent</string>
+    <string name="settle">Settle</string>
+    <string name="no_debts">No debts recorded</string>
+    <string name="total_lent">Total Lent</string>
+    <string name="total_borrowed">Total Borrowed</string>
+
+    <!-- Chat -->
+    <string name="type_message">Type a message...</string>
+    <string name="send">Send</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="chat_welcome">Hi! I\'m your SLOTS assistant. Ask me anything about your tasks, budget, or debts!</string>
+
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+
+    <!-- Web client ID for Google Sign-In (replace with actual value) -->
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID.apps.googleusercontent.com</string>
+</resources>

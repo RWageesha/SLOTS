@@ -1,7 +1,9 @@
 -- SLOTS Seed Data for Development/Testing
 -- Run this AFTER schema.sql
 
--- Insert test user (replace 'test-firebase-uid' with a real Firebase UID)
+-- Insert test user
+-- IMPORTANT: Replace 'test-firebase-uid-here' with an actual Firebase UID from your
+-- Firebase project (found in Firebase Console → Authentication → Users → UID column).
 INSERT INTO users (id, email, name, firebase_uid)
 VALUES 
     ('00000000-0000-0000-0000-000000000001', 'test@example.com', 'Test User', 'test-firebase-uid-here')

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.MediatorLiveData
 import androidx.navigation.fragment.findNavController
 import com.slots.app.R
 import com.slots.app.databinding.FragmentDashboardBinding
@@ -50,15 +51,20 @@ class DashboardFragment : Fragment() {
         }
 
         viewModel.monthlyExpenses.observe(viewLifecycleOwner) { expenses ->
-            val expenseAmount = expenses ?: 0.0
-            binding.tvMonthlyExpenses.text = currencyFormat.format(expenseAmount)
+            binding.tvMonthlyExpenses.text = currencyFormat.format(expenses ?: 0.0)
         }
 
-        viewModel.monthlyIncome.observe(viewLifecycleOwner) { income ->
-            viewModel.monthlyExpenses.value?.let { expenses ->
-                val balance = (income ?: 0.0) - expenses
-                binding.tvBalance.text = currencyFormat.format(balance)
+        // Use MediatorLiveData so balance updates whenever either income or expenses changes
+        val balanceLiveData = MediatorLiveData<Double>().apply {
+            addSource(viewModel.monthlyIncome) { income ->
+                value = (income ?: 0.0) - (viewModel.monthlyExpenses.value ?: 0.0)
             }
+            addSource(viewModel.monthlyExpenses) { expenses ->
+                value = (viewModel.monthlyIncome.value ?: 0.0) - (expenses ?: 0.0)
+            }
+        }
+        balanceLiveData.observe(viewLifecycleOwner) { balance ->
+            binding.tvBalance.text = currencyFormat.format(balance)
         }
     }
 

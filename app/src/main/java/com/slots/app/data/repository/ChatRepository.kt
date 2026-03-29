@@ -46,6 +46,8 @@ class ChatRepository @Inject constructor(
             )
 
             val response = openAiService.getChatCompletion(
+                // NOTE: In production, remove BuildConfig.OPENAI_API_KEY and instead proxy
+                // all AI requests through your backend (backend/api/chatbot.js already does this).
                 bearerToken = "Bearer ${BuildConfig.OPENAI_API_KEY}",
                 request = request
             )

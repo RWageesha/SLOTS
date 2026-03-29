@@ -21,6 +21,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "BASE_URL", '"https://your-vercel-app.vercel.app/"'
+        // WARNING: For production, remove this and proxy OpenAI calls through your backend instead.
         buildConfigField "String", "OPENAI_API_KEY", '"your_openai_api_key_here"'
     }
 
